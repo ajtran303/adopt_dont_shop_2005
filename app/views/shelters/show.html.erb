@@ -1,0 +1,6 @@
+<html lang="en">
+<main>
+<% @shelter.attributes.values_at("name", "address", "city", "state", "zip").each do |attribute| %>
+  <%= tag.h1 attribute %>
+<% end %>
+</main>

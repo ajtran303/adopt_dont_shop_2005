@@ -1,6 +1,7 @@
 <html lang="en">
 <main>
-<% @shelter.attributes.values_at("name", "address", "city", "state", "zip").each do |attribute| %>
-  <%= tag.h1 attribute %>
-<% end %>
+  <%= tag.h1 @shelter.name %>
+  <% @shelter.attributes.values_at("address", "city", "state", "zip").each do |attribute| %>
+    <%= tag.p attribute %>
+  <% end %>
 </main>

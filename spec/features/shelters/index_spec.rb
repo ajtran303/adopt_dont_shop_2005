@@ -10,10 +10,10 @@ describe "Shelters Index Spec" do
 
       visit "/shelters"
 
-      expect(page).to have_content(shelter1.name)
-      expect(page).to have_content(shelter2.name)
-      expect(page).to have_content(shelter3.name)
-      expect(page).to have_content(shelter4.name)
+      expect(page).to have_text(shelter1.name)
+      expect(page).to have_text(shelter2.name)
+      expect(page).to have_text(shelter3.name)
+      expect(page).to have_text(shelter4.name)
     end
   end
 end

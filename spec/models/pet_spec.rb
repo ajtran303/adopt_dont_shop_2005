@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Pet do
+describe Pet, type: :model do
   describe "associations" do
     it { should belong_to(:shelter) }
   end

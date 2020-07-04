@@ -5,4 +5,5 @@
     <%= tag.p attribute %>
   <% end %>
 <%= link_to("Update Shelter", "/shelters/#{@shelter.id}/edit") %>
+<%= link_to("Delete Shelter", "/shelters/#{@shelter.id}", method: :delete) %>
 </main>

@@ -23,10 +23,10 @@ describe "Shelter Pet Creation Spec" do
 
         expect(current_path).to eql("#{shelter_pets_index}/new")
 
-        fill_in "Image URL", with: image_placeholder
+        fill_in :image, with: image_placeholder
         fill_in "Name", with: "Liono"
         fill_in "Description", with: "What a ferociously cuddly lion!"
-        fill_in "Approximate Age", with: "80"
+        fill_in :approximate_age, with: "80"
         fill_in "Sex", with: "male"
 
         click_button("Create Pet")

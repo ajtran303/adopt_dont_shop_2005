@@ -1,0 +1,14 @@
+<html lang="en">
+<header>
+  <%= tag.h1 "All Pets at #{@shelter.name}:" %>
+</header>
+<main>
+  <% @shelter.pets.each do |pet| %>
+    <section>
+      <%= image_tag(pet.image, alt: "#{pet.name}'s photo.", id: "#{pet.name.downcase}-image") %>
+      <%= tag.h2 "Name: #{pet.name}" %>
+      <%= tag.p "Age: #{pet.approximate_age}" %>
+      <%= tag.p "Sex: #{pet.sex}" %>
+    </section>
+  <% end %>
+</main>

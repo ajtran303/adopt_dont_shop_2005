@@ -10,8 +10,8 @@ describe "Shelter Pets Index" do
         placeholder_image = "generic-image-placeholder.png"
         image_name = placeholder_image[0...-4]
 
-        loggo = Pet.create(image: placeholder_image, name: "Loggo", approximate_age: 3, sex: "M", shelter: lizzo_house)
-        latto = Pet.create(image: placeholder_image, name: "Latto", approximate_age: 7, sex: "F", shelter: lizzo_house)
+        loggo = Pet.create(image: placeholder_image, name: "Loggo", approximate_age: 3, sex: "M", shelter: lizzo_house, description: "What a cute animal!", status: "Adoptable")
+        latto = Pet.create(image: placeholder_image, name: "Latto", approximate_age: 7, sex: "F", shelter: lizzo_house, description: "What a cute animal!", status: "Adoptable")
 
         visit "/shelters/#{id}/pets"
 

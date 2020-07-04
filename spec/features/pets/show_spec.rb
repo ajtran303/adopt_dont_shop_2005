@@ -8,7 +8,7 @@ describe "Pet Show Spec" do
         image_name = placeholder_image[0...-4]
 
         doggo_house = Shelter.create(name: "Doggo House", address: "1323 Paper St", city: "Denver", state: "CO", zip: "000000")
-        doggo = Pet.create(image: placeholder_image, name: "Doggo", approximate_age: 3, sex: "M", shelter: doggo_house)
+        doggo = Pet.create(image: placeholder_image, name: "Doggo", approximate_age: 3, sex: "M", shelter: doggo_house, description: "What a cute animal!", status: "Adoptable")
         id = doggo.id
 
         visit "/pets/#{id}"

@@ -1,0 +1,9 @@
+<html lang="en">
+<main>
+  <%= image_tag(@pet.image, alt: "#{@pet.name}'s photo.", id: "#{@pet.name.downcase}-image") %>
+  <%= tag.h1 "Name: #{@pet.name}" %>
+  <%= tag.p "Description: #{@pet.description}" %>
+  <%= tag.p "Age: #{@pet.approximate_age}" %>
+  <%= tag.p "Sex: #{@pet.sex}" %>
+  <%= tag.p "Status: #{@pet.status}" %>
+</main>

@@ -9,8 +9,25 @@ describe "Pet Index Spec" do
       doggo_house = Shelter.create(name: "Doggo House", address: "1323 Paper St", city: "Denver", state: "CO", zip: "000000")
       catto_house = Shelter.create(name: "Catto House", address: "2124 N. Pencil Ave", city: "Denver", state: "CO", zip: "000000")
 
-      doggo = Pet.create(image: placeholder_image, name: "Doggo", approximate_age: 3, sex: "M", shelter: doggo_house)
-      catto = Pet.create(image: placeholder_image, name: "Catto", approximate_age: 7, sex: "F", shelter: catto_house)
+      doggo = Pet.create(
+        image: placeholder_image,
+        name: "Doggo",
+        approximate_age: 3,
+        sex: "M",
+        shelter: doggo_house,
+        description: "What a cute animal!",
+        status: "Adoptable"
+      )
+
+      catto = Pet.create(
+        image: placeholder_image,
+        name: "Catto",
+        approximate_age: 7,
+        sex: "F",
+        shelter: catto_house,
+        description: "What a cute animal!",
+        status: "Adoptable"
+      )
 
       visit "/pets"
 

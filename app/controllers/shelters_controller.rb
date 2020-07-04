@@ -21,9 +21,7 @@ class SheltersController < ApplicationController
 
   def update
     shelter = Shelter.find(params[:id])
-    update_params = shelter_params.reject do |_, value|
-      value.empty?
-    end
+    update_params = shelter_params.reject { |_, param| param.empty? }
     shelter.update(update_params)
     shelter.save
     redirect_to "/shelters"

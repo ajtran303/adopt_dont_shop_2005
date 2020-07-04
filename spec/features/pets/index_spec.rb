@@ -18,19 +18,19 @@ describe "Pet Index Spec" do
       expect(doggo_image[:src]).to include(image_name)
       expect(doggo_image[:alt]).to eq("#{doggo.name}'s photo.")
 
-      expect(page).to have_text(doggo.name)
-      expect(page).to have_text(doggo.approximate_age)
-      expect(page).to have_text(doggo.sex)
-      expect(page).to have_text(doggo_house.name)
+      expect(page).to have_text("Name: #{doggo.name}")
+      expect(page).to have_text("Age: #{doggo.approximate_age}")
+      expect(page).to have_text("Sex: #{doggo.sex}")
+      expect(page).to have_text("Shelter: #{doggo_house.name}")
 
       catto_image = find("#catto-image")
       expect(catto_image[:src]).to include(image_name)
       expect(catto_image[:alt]).to eq("#{catto.name}'s photo.")
 
-      expect(page).to have_text(catto.name)
-      expect(page).to have_text(catto.approximate_age)
-      expect(page).to have_text(catto.sex)
-      expect(page).to have_text(catto_house.name)
+      expect(page).to have_text("Name: #{catto.name}")
+      expect(page).to have_text("Age: #{catto.approximate_age}")
+      expect(page).to have_text("Sex: #{catto.sex}")
+      expect(page).to have_text("Shelter: #{catto_house.name}")
 
     end
   end

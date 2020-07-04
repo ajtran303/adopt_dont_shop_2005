@@ -15,7 +15,7 @@ describe "Pet Show Spec" do
 
         doggo_image = find("#doggo-image")
         expect(doggo_image[:src]).to include(image_name)
-        expect(doggo_image[:alt]).to eq("#{doggo.name}'s photo.")
+        expect(doggo_image[:alt]).to eq("Photo of #{doggo.name}.")
 
         expect(page).to have_text("Name: #{doggo.name}")
         expect(page).to have_text("Description: #{doggo.description}")

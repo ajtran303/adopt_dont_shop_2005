@@ -1,7 +1,7 @@
 <html lang="en">
 <main>
 <% @shelters.each do |shelter| %>
-  <%= tag.h1 shelter.name %>
+  <h1><%= link_to("#{shelter.name}", "/shelters/#{shelter.id}") %></h1>
   <%= link_to("Update Shelter", "/shelters/#{shelter.id}/edit") %>
   <%= link_to("Delete Shelter", "/shelters/#{shelter.id}", method: :delete) %>
 <% end %>

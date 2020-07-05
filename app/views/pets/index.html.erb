@@ -6,7 +6,7 @@
       <%= tag.h2 "Name: #{pet.name}" %>
       <%= tag.p "Age: #{pet.approximate_age}" %>
       <%= tag.p "Sex: #{pet.sex}" %>
-      <%= tag.p "Shelter: #{pet.shelter.name}" %>
+      <p>"Shelter: <%= link_to(pet.shelter.name, "/shelters/#{pet.shelter.id}") %></p>
       <%= link_to("Update Pet", "/pets/#{pet.id}/edit") %>
       <%= link_to("Delete Pet", "/pets/#{pet.id}", method: :delete) %>
     </section>

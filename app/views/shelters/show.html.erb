@@ -1,4 +1,7 @@
 <html lang="en">
+<nav>
+  <%= link_to("Pet Index", "/pets") %>
+</nav>
 <main>
   <h1><%= link_to(@shelter.name, "/shelters/#{@shelter.id}") %></h1>
   <% @shelter.attributes.values_at("address", "city", "state", "zip").each do |attribute| %>

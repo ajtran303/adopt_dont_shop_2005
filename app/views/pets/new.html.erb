@@ -1,4 +1,7 @@
 <html lang="en">
+<nav>
+  <%= link_to("Pet Index", "/pets") %>
+</nav>
 <main>
   <%= form_tag "/shelters/#{@shelter_id}/pets", method: :post do %>
     <%= label_tag "Image URL" %>

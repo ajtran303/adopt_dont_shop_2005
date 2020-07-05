@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "As a visitor" do
+describe "Pet Links Spec" do
   describe "As a visitor to any page on the site" do
     describe "I can click a pet name to go the pet's show page" do
       before(:each) do

@@ -11,7 +11,7 @@
   <% @shelter.pets.each do |pet| %>
     <section>
       <%= image_tag(pet.image, alt: "#{pet.name}'s photo.", id: "#{pet.name.downcase}-image") %>
-      <%= tag.h2 "Name: #{pet.name}" %>
+      <h2>Name: <%= link_to(pet.name, "/pets/#{pet.id}") %></h2>
       <%= tag.p "Age: #{pet.approximate_age}" %>
       <%= tag.p "Sex: #{pet.sex}" %>
       <%= link_to("Update Pet", "/pets/#{pet.id}/edit") %>

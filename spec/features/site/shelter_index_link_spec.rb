@@ -179,7 +179,7 @@ describe "Shelter Index Link" do
       end
 
       describe "Welcome page" do
-        xit "Has a link to pet index" do
+        it "Has a link to pet index" do
           shelter_index_page = "/shelters"
           shelter_index_link = "Shelter Index"
 

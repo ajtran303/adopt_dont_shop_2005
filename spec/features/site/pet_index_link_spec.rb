@@ -178,7 +178,7 @@ describe "Pet Index Link spec" do
     end
 
     describe "Welcome page" do
-      xit "Has a link to pet index" do
+      it "Has a link to pet index" do
         pet_index_page = "/pets"
         pet_index_link = "Pet Index"
 

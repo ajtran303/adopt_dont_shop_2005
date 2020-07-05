@@ -4,7 +4,7 @@
                 alt: "Photo of #{@pet.name}.",
                 id: "#{@pet.name.downcase.gsub(" ", "-")}-image") %>
 
-  <%= tag.h1 "Name: #{@pet.name}" %>
+  <h1>Name: <%= link_to(@pet.name, "/pets/#{@pet.id}") %></h1>
   <%= tag.p "Description: #{@pet.description}" %>
   <%= tag.p "Age: #{@pet.approximate_age}" %>
   <%= tag.p "Sex: #{@pet.sex}" %>

@@ -7,6 +7,7 @@
       <%= tag.p "Age: #{pet.approximate_age}" %>
       <%= tag.p "Sex: #{pet.sex}" %>
       <%= tag.p "Shelter: #{pet.shelter.name}" %>
+      <%= link_to("Update Pet", "/pets/#{pet.id}/edit") %>
     </section>
   <% end %>
 </main>

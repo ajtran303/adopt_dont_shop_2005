@@ -5,8 +5,8 @@ describe "The Welcome Page" do
     it "has links to a Pets and Shelter indices" do
       visit "/"
 
-      expect(page).to have_link("Shelter Index", "/shelters")
-      expect(page).to have_link("Pets Index", "/pets")
+      expect(page).to have_link("Shelter Index", href: "/shelters")
+      expect(page).to have_link("Pets Index", href: "/pets")
     end
   end
 end

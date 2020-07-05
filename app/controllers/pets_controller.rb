@@ -4,7 +4,7 @@ class PetsController < ApplicationController
   end
 
   def show
-    @pet = Pet.find(params[:id])
+    pet
   end
 
   def new
@@ -17,18 +17,17 @@ class PetsController < ApplicationController
   end
 
   def edit
-    @pet = Pet.find(params[:id])
+    pet
   end
 
   def update
-    pet = Pet.find(params[:id])
     pet.update(update_pet_params)
     pet.save
     redirect_to "/pets/#{pet.id}"
   end
 
   def destroy
-    Pet.destroy(params[:id])
+    pet.destroy
     redirect_to "/pets"
   end
 
@@ -38,14 +37,18 @@ class PetsController < ApplicationController
   end
 
   def create_pet_params
-    pet = pet_params
-    pet.to_h
-    pet[:status] = "Adoptable"
-    pet[:shelter_id] = params[:id]
-    pet
+    create_params = pet_params
+    create_params.to_h
+    create_params[:status] = "Adoptable"
+    create_params[:shelter_id] = params[:id]
+    create_params
   end
 
   def update_pet_params
     pet_params.reject { |_, param| param.empty? }
+  end
+
+  def pet
+    @pet = Pet.find(params[:id])
   end
 end

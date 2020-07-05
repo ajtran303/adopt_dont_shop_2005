@@ -69,7 +69,6 @@ describe "Pet Links Spec" do
 
             shelter_pets.each do |pet|
               pet_show_page = "/pets/#{pet.id}"
-              visit pet_show_page
 
               expect(page).to have_link(pet.name, href: pet_show_page)
 

@@ -26,6 +26,8 @@ describe "Pet Delete" do
 
         show_page = "/pets/#{doggo.id}"
 
+        visit show_page
+
         click_link "Delete Pet"
 
         expect(current_path).to eq("/pets")

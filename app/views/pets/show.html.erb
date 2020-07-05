@@ -10,4 +10,5 @@
   <%= tag.p "Sex: #{@pet.sex}" %>
   <%= tag.p "Status: #{@pet.status}" %>
   <%= link_to("Update Pet", "/pets/#{@pet.id}/edit") %>
+  <%= link_to("Delete Pet", "/pets/#{@pet.id}/", method: :delete) %>
 </main>

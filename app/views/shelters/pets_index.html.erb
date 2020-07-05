@@ -11,6 +11,7 @@
       <%= tag.p "Age: #{pet.approximate_age}" %>
       <%= tag.p "Sex: #{pet.sex}" %>
       <%= link_to("Update Pet", "/pets/#{pet.id}/edit") %>
+      <%= link_to("Delete Pet", "/pets/#{pet.id}", method: :delete) %>
     </section>
   <% end %>
 </main>

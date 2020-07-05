@@ -28,7 +28,7 @@ describe "As a visitor" do
           name: "Doggo",
           approximate_age: 3,
           sex: "M",
-          shelter: @shelter1,
+          shelter: @dog_shelter,
           description: "What a cute animal!",
           status: "Adoptable"
         )
@@ -38,7 +38,7 @@ describe "As a visitor" do
           name: "Catto",
           approximate_age: 7,
           sex: "F",
-          shelter: @shelter2,
+          shelter: @cat_shelter,
           description: "What a cute animal!",
           status: "Adoptable"
         )
@@ -60,26 +60,11 @@ describe "As a visitor" do
         end
       end
 
-      describe "A Pet's Show page" do
-        it "link to that pet" do
-          @pets.each do |pet|
-            pet_show_page = "/pets/#{pet.id}"
-            visit pet_show_page
-
-            expect(page).to have_link(pet.name, href: pet_show_page)
-
-            click_link pet.name
-            expect(current_path).to eql(pet_show_page)
-          end
-        end
-      end
-
       describe "A Shelter's Pets Index page" do
         it "links to every pet" do
           @shelters.each do |shelter|
             shelter_pets_index = "/shelters/#{shelter.id}/pets"
             shelter_pets = @pets.find_all { |pet| pet.shelter == shelter }
-
             visit shelter_pets_index
 
             shelter_pets.each do |pet|
